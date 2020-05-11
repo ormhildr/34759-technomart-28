@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дмитрий Волков](https://up.htmlacademy.ru/htmlcss/28/user/34759).
-* Наставник: `Неизвестно`.
+* Наставник: [Рафаэль Гулиев](https://htmlacademy.ru/profile/thundercat).
 
 ---
 
