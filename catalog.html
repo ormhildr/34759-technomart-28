@@ -12,32 +12,31 @@
         <div>
             <a>Техномарт</a>
             <form action="#" method="POST">
-                <input type="search" placeholder="Поиск:">
+                <input type="search" name="search" placeholder="Поиск:">
             </form>
             <a href="">Закладки: 0</a>
             <a href="">Корзина: 10</a>
             <a href="">Оформить заказ</a>
         </div>
-        <section>
-            <h2>Интернет-магазин "Техномарт"</h2>
-            <div>
-                <i>Интернет-магазин<br>
-            строительных материалов <br>
-            и инструментов для ремонта</i>
-            </div>
+        <div>
+            <p>Интернет-магазин<br> строительных материалов <br> и инструментов для ремонта</p>
             <div>
                 <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-                <a href="">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
+                <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
-            <div>
-                <h2>Личный кабинет</h2>
-                <a href="">Равшан Джамшутович</a>
+            <section>
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <ul>
+                    <li><a href="">Войти в личный кабинет</a></li>
+                    <li><a href="">Равшан Джамшутович</a></li>
+                    <li><a href="">Выйти из личного кабинета</a></li>
+                </ul>
                 <ul>
                     <li><a href="">Мои заказы</a></li>
                     <li><a href="">Личный кабинет</a></li>
                 </ul>
-            </div>
-        </section>
+            </section>
+        </div>
         <nav>
             <ul>
                 <li>
@@ -74,24 +73,47 @@
             <h1>ПЕРФОРАТОРЫ</h1>
             <div>
                 <h2>Фильтр</h2>
-                <div>
-                    <h3>Производители:</h3>
-                    <ul>
-                        <li>BOSCH</li>
-                        <li>ИНТЕРСКОЛ</li>
-                        <li>Makita</li>
-                        <li>Dewalt</li>
-                        <li>Hitachi</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Питание:</h3>
-                    <ul>
-                        <li>Аккумуляторные</li>
-                        <li>Сетевые</li>
-                    </ul>
-                </div>
-                <button type="submit">ПОКАЗАТЬ</button>
+                <form action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset>
+                        <legend>Производители:</legend>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                                <label for="filter-bosch">BOSCH</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="interskol" id="filter-interskol">
+                                <label for="filter-interskol">ИНТЕРСКОЛ</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="makita" id="filter-makita" checked>
+                                <label for="filter-makita">Makita</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                                <label for="filter-dewalt">Dewalt</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                                <label for="filter-hitachi">Hitachi</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Питание:</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="battery" id="filter-battery" checked>
+                                <label for="filter-battery">Аккумуляторные</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="network" id="filter-network">
+                                <label for="filter-network">Сетевые</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit">Показать</button>
+                </form>
             </div>
             <div>
                 <h2>СОРТИРОВКА:</h2>
@@ -204,7 +226,7 @@
         </section>
     </main>
     <footer>
-        <section>
+        <div>
             <div>
                 <a>Техномарт</a>
                 <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55</p>
@@ -224,7 +246,7 @@
                     <li>Спецпредложения</li>
                 </ul>
             </div>
-        </section>
+        </div>
         <div>
             <p>© 2010–2019 Компания «Техномарт» <br> Все права защищены</p>
             <ul>
@@ -252,6 +274,18 @@
             </p>
         </div>
     </footer>
+    <section>
+        <h2>Товар добавлен в корзину!</h2>
+        <ul>
+            <li>
+                <a href="">Оформить заказ</a>
+            </li>
+            <li>
+                <a href="">Продолжить покупки</a>
+            </li>
+        </ul>
+        <button type="button" name="close">Закрыть</button>
+    </section>
 </body>
 
 </html>
