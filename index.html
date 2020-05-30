@@ -14,16 +14,16 @@
     <header class="main-header">
         <div class="main-header-top">
             <div class="container">
-                <a class="main-header-logo" href="index.html">
+                <a class="main-header-logo" href="">
                     <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
                 </a>
-                <form class="search" action="#" method="POST">
+                <form class="search basic-navigation" action="#" method="POST">
                     <input type="search" name="search" placeholder="Поиск:">
                 </form>
                 <div class="products-navigation">
-                    <a class="favorites" href="">Закладки: 0</a>
-                    <a class="cart" href="">Корзина: 0</a>
-                    <a class="order" href="">Оформить заказ</a>
+                    <a class="favorites basic-navigation" href="">Закладки: 0</a>
+                    <a class="cart basic-navigation" href="">Корзина: 0</a>
+                    <a class="order basic-navigation" href="">Оформить заказ</a>
                 </div>
             </div>
         </div>
@@ -43,25 +43,25 @@
                 <nav class="main-navigation">
                     <ul>
                         <li>
-                            <a href="">Главная</a>
+                            <a class="basic-navigation" href="index.html">Главная</a>
                         </li>
                         <li>
-                            <a href="">Компания</a>
+                            <a class="basic-navigation" href="">Компания</a>
                         </li>
                         <li>
-                            <a href="/catalog.html">Каталог</a>
+                            <a class="basic-navigation" href="/catalog.html">Каталог</a>
                         </li>
                         <li>
-                            <a href="">Новости</a>
+                            <a class="basic-navigation" href="">Новости</a>
                         </li>
                         <li>
-                            <a href="">Спецпредложения</a>
+                            <a class="basic-navigation" href="">Спецпредложения</a>
                         </li>
                         <li>
-                            <a href="">Доставка</a>
+                            <a class="basic-navigation" href="">Доставка</a>
                         </li>
                         <li>
-                            <a href="">Контакты</a>
+                            <a class="basic-navigation" href="">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -92,7 +92,7 @@
                         <button class="arrow-right" type="button" name="arrow-right">Следующий слайд</button>
                         <a class="button" href="catalog.html">Открыть каталог</a>
                     </div>
-                    <div class="main-menu-slide">
+                    <div class="main-menu-slide visually-hidden">
                         <h3>Дрели</h3>
                         <p>Соседям на радость!</p>
                         <button class="arrow-left" type="button" name="arrow-left">Предыдущий слайд</button>
@@ -229,25 +229,31 @@
                 </div>
                 <div class="features-main">
                     <ul class="features-list">
-                        <li class="features-item">Доставка</li>
-                        <li class="features-item">Гарантия</li>
-                        <li class="features-item">Кредит</li>
+                        <li class="features-item">
+                            <button class="features-button features-button-active" type="button" name="delivery-button">Доставка</button>
+                        </li>
+                        <li class="features-item">
+                            <button class="features-button features-button-disable" type="button" name="guarantee-button">Гарантия</button>
+                        </li>
+                        <li class="features-item">
+                            <button class="features-button features-button-disable" type="button" name="credit-button">Кредит</button>
+                        </li>
                     </ul>
                     <div class="features-all">
                         <div class="features-delivery">
                             <h3>Доставка</h3>
                             <p>Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж!</p>
                         </div>
-                        <div class="features-guarantee">
+                        <div class="features-guarantee features-hidden">
                             <h3>Гарантия</h3>
                             <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите
                                 как-нибудь сами.
                             </p>
                         </div>
-                        <div class="features-credit">
+                        <div class="features-credit features-hidden">
                             <h3>Кредит</h3>
                             <p>Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
-                            <a href="">Отправить заявку</a>
+                            <a class="button" href="">Отправить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -260,12 +266,12 @@
                     <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и строительства не оставит равнодушными любителей сэкономить на <br> гастарбайтерах.</p>
                     <div class="partners">
                         <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br> Техномарт работает со многими транспортными компаниями:</p>
-                        <ul class="partners-list">
+                        <ul class="partners-list basic-navigation">
                             <li class="partners-item">Деловые линии</li>
                             <li class="partners-item">Автотрейдинг</li>
                             <li class="partners-item">ЖелДорЭкспедиция</li>
                         </ul>
-                        <a class="more" href="">Подробнее о компании</a>
+                        <a class="button" href="">Подробнее о компании</a>
                     </div>
                 </section>
                 <section class="main-contacts">
@@ -274,7 +280,7 @@
                     <a class="main-map" href="">
                         <img src="img/img_map.jpg" width="300" height="158" alt="Адрес: Большая Конюшенная, д.19">
                     </a>
-                    <a class="button-write-to" href="">Заблудились? Напишите нам!</a>
+                    <a class="button" href="">Заблудились? Напишите нам!</a>
                 </section>
             </div>
         </div>
@@ -286,38 +292,39 @@
                     <a class="main-footer-logo">
                         <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип интернет-магазина «Техномарт»">
                     </a>
-                    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55</p>
+                    <p class="basic-navigation">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                    <a class="footer-contacts-phone basic-navigation" href="tel:+78125550555">+7 (812) 555-05-55</a>
                 </div>
                 <div class="main-footer-navigation">
                     <ul class="footer-menu-list">
                         <li class="footer-menu-item">
-                            <a href="">Компания</a>
+                            <a class="basic-navigation" href="">Компания</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="">Новости</a>
+                            <a class="basic-navigation" href="">Новости</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="catalog.html">Каталог</a>
+                            <a class="basic-navigation" href="catalog.html">Каталог</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="">Доставка</a>
+                            <a class="basic-navigation" href="">Доставка</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="">Контакты</a>
+                            <a class="basic-navigation" href="">Контакты</a>
                         </li>
                     </ul>
                     <ul class="footer-menu-list">
                         <li class="footer-menu-item">
-                            <a href="">Материалы</a>
+                            <a class="basic-navigation" href="">Материалы</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="">Техника</a>
+                            <a class="basic-navigation" href="">Техника</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="">Инструмент</a>
+                            <a class="basic-navigation" href="">Инструмент</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="">Спецпредложения</a>
+                            <a class="basic-navigation" href="">Спецпредложения</a>
                         </li>
                     </ul>
                 </div>
@@ -349,7 +356,7 @@
                         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </p>
                     <p>Разработано - <br>
-                        <a href="https://htmlacademy.ru/" target="_blank">htmlacademy.ru</a>
+                        <a href="https://htmlacademy.ru/intensive/htmlcss/" target="_blank">htmlacademy.ru</a>
                     </p>
                 </div>
             </div>
