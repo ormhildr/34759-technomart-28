@@ -296,6 +296,10 @@ img {
     fill: var(--buttons-svg-hover);
 }
 
+.button-into:active svg path {
+    fill: var(--borders-grey);
+}
+
 .button-registration {
     padding: 12px 24px;
 }
@@ -567,6 +571,18 @@ img {
     margin-left: 17px;
 }
 
+.popular-products-list .products-item:nth-child(2)::after,
+.popular-products-list .products-item:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background-image: url("/img/img_new.png");
+    background-repeat: no-repeat;
+}
+
 .popular-makers {
     margin-top: 70px;
 }
@@ -615,8 +631,13 @@ img {
     line-height: 24px;
 }
 
+.features-title {
+    margin-bottom: 70px;
+}
+
 .features-title h2 {
     margin: 0;
+    margin-bottom: 23px;
     color: var(--basic-black);
     font-size: 30px;
     line-height: 30px;
@@ -624,19 +645,27 @@ img {
     text-transform: uppercase;
 }
 
-.features-title p {
-    margin-top: 23px;
-}
-
 .features-main {
     display: flex;
-    margin-top: 70px;
 }
 
 .features-list {
+    position: relative;
     margin: 0;
     margin-right: 80px;
     list-style-type: none;
+}
+
+.features-list::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 279px;
+    bottom: 26px;
+    right: 0px;
+    background-image: url(/img/shadow-line.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .features-item {
@@ -674,15 +703,12 @@ img {
 
 .features-all h3 {
     margin: 0;
+    margin-bottom: 29px;
     color: var(--basic-blue);
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
-}
-
-.features-all p {
-    margin-top: 30px;
 }
 
 .features-delivery {
@@ -736,7 +762,11 @@ img {
     text-transform: uppercase;
 }
 
-.about-company p {
+.main-contacts-description {
+    margin-bottom: 33px;
+}
+
+.about-company-description {
     margin: 0;
     margin-bottom: 26px;
     padding: 0;
@@ -764,6 +794,31 @@ img {
     list-style: none;
 }
 
+.partners-item {
+    position: relative;
+}
+
+.partners-item::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 2px;
+    top: 10px;
+    left: -37px;
+    background-color: var(--basic-red);
+    background-position: 0 0;
+}
+
+.partners-item:first-child::before {
+    top: 14px;
+    left: -37px;
+}
+
+.partners-item:nth-child(2)::before {
+    top: 12px;
+    left: -37px;
+}
+
 .partners-list li:not(:first-child) {
     margin-top: 12px;
 }
@@ -776,14 +831,13 @@ img {
 
 .main-map {
     display: block;
-    margin-top: 32px;
+    margin-bottom: 18px;
 }
 
 .modal-summon-button {
     display: inline-block;
     vertical-align: middle;
-    margin-top: 18px;
-    padding: 11px 61px 9px 61px;
+    padding: 11px 62px 9px 61px;
 }
 
 .main-footer {
@@ -892,12 +946,12 @@ img {
 .socials-list {
     display: flex;
     margin: 0;
-    margin-right: 117px;
+    margin-right: 119px;
     list-style: none;
 }
 
 .social-item:not(:last-child) {
-    margin-right: 1px;
+    margin-right: 3px;
 }
 
 .social-button {
@@ -905,8 +959,8 @@ img {
     align-items: center;
     justify-content: center;
     margin-top: 4px;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     background-color: var(--socials-background);
     border-radius: 50%;
 }
@@ -999,31 +1053,37 @@ img {
     line-height: 21px;
 }
 
-.into-cabinet:before {
+.into-cabinet svg {
     content: "";
     position: absolute;
     top: 5px;
     left: 15px;
     width: 20px;
     height: 18px;
-    background-image: url("/img/icon_loginface.svg");
-    background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.into-cabinet:hover svg path,
+.exit-cabinet:hover svg path {
+    fill: var(--buttons-svg-hover);
+}
+
+.into-cabinet:active svg path,
+.exit-cabinet:active svg path {
+    fill: var(--borders-grey);
 }
 
 .exit-cabinet {
     position: relative;
 }
 
-.exit-cabinet::after {
+.exit-cabinet svg {
     content: "";
     position: absolute;
     top: -8px;
     left: 21px;
     width: 20px;
     height: 17px;
-    background-image: url("/img/icon_exit.svg");
-    background-repeat: no-repeat;
     background-position: 0 0;
 }
 
@@ -1037,10 +1097,10 @@ img {
 .personal-navigation::after {
     content: "";
     position: absolute;
-    top: 61px;
+    top: 59px;
     left: 133px;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: var(--basic-blue);
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -1281,6 +1341,21 @@ img {
 .sorting-button-active {
     color: var(--basic-red);
     border: none;
+}
+
+.sorting-button-up svg {
+    display: block;
+    transform: scale(1, -1);
+    margin-top: 8px;
+    margin-left: 2px;
+    opacity: 0.3;
+}
+
+.sorting-button-down svg {
+    display: block;
+    margin-top: 8px;
+    margin-left: 1px;
+    opacity: 0.3;
 }
 
 .products-column {
