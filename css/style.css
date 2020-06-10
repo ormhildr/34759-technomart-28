@@ -180,7 +180,7 @@ img {
     left: 20px;
     width: 14px;
     height: 16px;
-    background-image: url("/img/icon_bookmark.svg");
+    background-image: url("../img/icon_bookmark.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
 }
@@ -198,7 +198,7 @@ img {
     left: 26px;
     width: 15px;
     height: 15px;
-    background-image: url("/img/icon_cart.svg");
+    background-image: url("../img/icon_cart.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
 }
@@ -370,7 +370,7 @@ img {
 }
 
 .main-menu-item:nth-of-type(1) {
-    background-image: url("/img/img_materials.png");
+    background-image: url("../img/img_materials.png");
     background-position-x: 213px;
     background-position-y: 31px;
     background-repeat: no-repeat;
@@ -384,12 +384,12 @@ img {
     right: 0;
     width: 70px;
     height: 70px;
-    background-image: url("/img/img_new.png");
+    background-image: url("../img/img_new.png");
     background-repeat: no-repeat;
 }
 
 .main-menu-item:nth-of-type(2) {
-    background-image: url("/img/img_tool.png");
+    background-image: url("../img/img_tool.png");
     background-position-x: 194px;
     background-position-y: 34px;
     background-repeat: no-repeat;
@@ -397,7 +397,7 @@ img {
 }
 
 .main-menu-item:nth-of-type(3) {
-    background-image: url("/img/img_technic.png");
+    background-image: url("../img/img_technic.png");
     background-position-x: 191px;
     background-position-y: 32px;
     background-repeat: no-repeat;
@@ -405,7 +405,7 @@ img {
 }
 
 .main-menu-item:nth-of-type(5) {
-    background-image: url("/img/img_sale.png");
+    background-image: url("../img/img_sale.png");
     background-position-x: 196px;
     background-position-y: 26px;
     background-repeat: no-repeat;
@@ -414,7 +414,7 @@ img {
 
 .main-menu-item:nth-of-type(6) {
     grid-column: -1 / -2;
-    background-image: url("/img/img_delivery.png");
+    background-image: url("../img/img_delivery.png");
     background-position-x: 191px;
     background-position-y: 32px;
     background-repeat: no-repeat;
@@ -485,12 +485,12 @@ img {
 }
 
 .slider-item:nth-of-type(1) {
-    background-image: url("/img/img_perforators.jpg");
+    background-image: url("../img/img_perforators.jpg");
     background-repeat: no-repeat;
 }
 
 .slider-item:nth-of-type(2) {
-    background-image: url("/img/img_drills.jpg");
+    background-image: url("../img/img_drills.jpg");
     background-repeat: no-repeat;
 }
 
@@ -585,7 +585,7 @@ img {
     right: 0;
     width: 70px;
     height: 70px;
-    background-image: url("/img/img_new.png");
+    background-image: url("../img/img_new.png");
     background-repeat: no-repeat;
 }
 
@@ -672,7 +672,7 @@ img {
     height: 279px;
     top: -45px;
     right: 0px;
-    background-image: url("/img/shadow-line.png");
+    background-image: url("../img/shadow-line.png");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -726,19 +726,19 @@ img {
 
 .features-delivery {
     height: 100%;
-    background-image: url("/img/img_delivery_auto.png");
+    background-image: url("../img/img_delivery_auto.png");
     background-repeat: no-repeat;
     background-position-x: 151px;
     background-position-y: 20px;
 }
 
 .features-guarantee {
-    background-image: url("/img/img_guarantees.png");
+    background-image: url("../img/img_guarantees.png");
     background-repeat: no-repeat;
 }
 
 .features-credit {
-    background-image: url("/img/img_credit.png");
+    background-image: url("../img/img_credit.png");
     background-repeat: no-repeat;
 }
 
@@ -1043,7 +1043,7 @@ img {
     left: 11px;
     width: 15px;
     height: 15px;
-    background-image: url("/img/icon_cart.svg");
+    background-image: url("../img/icon_cart.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
 }
@@ -1171,7 +1171,7 @@ img {
     right: -24px;
     width: 8px;
     height: 12px;
-    background-image: url("/img/icon_right-breadcrumbs.svg");
+    background-image: url("../img/icon_right-breadcrumbs.svg");
     background-repeat: no-repeat;
 }
 
@@ -1185,7 +1185,7 @@ img {
     margin-top: 5px;
     width: 14px;
     height: 12px;
-    background-image: url("/img/icon_home.svg");
+    background-image: url("../img/icon_home.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -1495,7 +1495,7 @@ img {
     left: 0;
     width: 141px;
     height: 38px;
-    background-image: url("/img/red-button.svg");
+    background-image: url("../img/red-button.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
     z-index: -1;
