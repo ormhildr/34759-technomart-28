@@ -11,6 +11,7 @@
 </head>
 
 <body class="page-body">
+
     <header class="main-header">
         <div class="main-header-top">
             <div class="header-top-wrapper container">
@@ -55,7 +56,7 @@
                         <a class="basic-navigation" href="">Компания</a>
                     </li>
                     <li class="main-navigation-item">
-                        <a class="basic-navigation" href="/catalog.html">Каталог</a>
+                        <a class="basic-navigation" href="catalog.html">Каталог</a>
                     </li>
                     <li class="main-navigation-item">
                         <a class="basic-navigation" href="">Новости</a>
@@ -73,6 +74,7 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="container">
             <section class="main-menu">
@@ -91,20 +93,24 @@
                 </div>
                 <div class="main-menu-slider">
                     <ul class="slider-list">
-                        <li class="slider-item slide">
+                        <li class="slider-item slide slide-current">
                             <h3>Перфораторы</h3>
                             <p>Настоящие мужские игрушки</p>
                             <a class="button" href="catalog.html">Открыть каталог</a>
                         </li>
-                        <li class="slider-item slide visually-hidden">
+                        <li class="slider-item slide">
                             <h3>Дрели</h3>
                             <p>Соседям на радость!</p>
                             <a class="button" href="catalog.html">Открыть каталог</a>
                         </li>
                     </ul>
-                    <div class="slider-controls">
+                    <div class="slider-controls-arrows">
                         <button class="arrow-left" type="button" aria-label="Предыдущий слайд"></button>
                         <button class="arrow-right" type="button" aria-label="Следующий слайд"></button>
+                    </div>
+                    <div class="slider-controls-dots">
+                        <button type="button" aria-label="Предыдущий слайд"></button>
+                        <button class="current" type="button" aria-label="Следующий слайд"></button>
                     </div>
                 </div>
                 <div class="main-menu-item">
@@ -292,6 +298,7 @@
             </div>
         </div>
     </main>
+
     <footer class="main-footer">
         <div class="main-footer-top">
             <div class="container">
@@ -371,30 +378,35 @@
         </section>
     </footer>
 
-    <section class="modal">
-        <h2 class="visually-hidden">Напишите нам!</h2>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-            <p>
-                <label for="order-name">Ваше имя:</label> <br>
-                <input id="order-name" type="text" name="name" placeholder="Имя Фамилия" required>
-            </p>
-            <p>
-                <label for="order-mail">Ваш e-mail:</label> <br>
-                <input id="order-mail" type="email" name="mail" placeholder="email@example.com" required>
-            </p>
-            <p>
-                <label for="order-letter">Текст письма:</label> <br>
-                <textarea name="letter" id="order-letter" cols="60" rows="10" placeholder="В свободной форме" required></textarea>
-            </p>
-            <button type="submit">Оформить заказ</button>
-        </form>
-        <button class="button-close" type="button" name="close">Закрыть</button>
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCQdnHs4SD" width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </iframe>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
-    <section class="modal">
-        <h2 class="visually-hidden">Карта</h2>
-        <img src="img/img_map-popup.png" alt="Карта с адресом нашей компании">
-        <button class="button-close" type="button" name="close">Закрыть</button>
+    <section class="modal modal-feedback">
+        <h2 class="visually-hidden">Напишите нам!</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
+            <div class="feedback-form-inner">
+                <p class="feedback-name">
+                    <label for="order-name">Ваше имя:</label>
+                    <input id="order-name" type="text" name="name" placeholder="Имя Фамилия" required>
+                </p>
+                <p class="feedback-mail">
+                    <label for="order-mail">Ваш e-mail:</label>
+                    <input id="order-mail" type="email" name="mail" placeholder="email@example.com" required>
+                </p>
+                <p class="feedback-message">
+                    <label for="order-letter">Текст письма:</label>
+                    <textarea name="letter" id="order-letter" cols="63" rows="5" placeholder="В свободной форме" required></textarea>
+                </p>
+            </div>
+            <div class="feedback-button-wrapper">
+                <button type="submit">Оформить заказ</button>
+            </div>
+        </form>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
 </body>
