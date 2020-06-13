@@ -391,15 +391,15 @@
             <div class="feedback-form-inner">
                 <p class="feedback-name">
                     <label for="order-name">Ваше имя:</label>
-                    <input id="order-name" type="text" name="name" placeholder="Имя Фамилия" required>
+                    <input class="feedback-name-input" id="order-name" type="text" name="name" placeholder="Имя Фамилия">
                 </p>
                 <p class="feedback-mail">
                     <label for="order-mail">Ваш e-mail:</label>
-                    <input id="order-mail" type="email" name="mail" placeholder="email@example.com" required>
+                    <input class="feedback-mail-input" id="order-mail" type="email" name="mail" placeholder="email@example.com">
                 </p>
                 <p class="feedback-message">
                     <label for="order-letter">Текст письма:</label>
-                    <textarea name="letter" id="order-letter" cols="63" rows="5" placeholder="В свободной форме" required></textarea>
+                    <textarea class="feedback-message-area" name="letter" id="order-letter" cols="63" rows="5" placeholder="В свободной форме"></textarea>
                 </p>
             </div>
             <div class="feedback-button-wrapper">
@@ -408,6 +408,8 @@
         </form>
         <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
+
+    <script src="js/script.js"></script>
 
 </body>
 
