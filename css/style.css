@@ -77,6 +77,7 @@ img {
 .page-body {
     min-height: 100%;
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
 }
@@ -151,12 +152,21 @@ img {
     opacity: 0.3;
 }
 
-.search-form:hover svg {
+.search-form:hover svg,
+.search-form:focus svg {
     opacity: 1;
 }
 
 .search:focus+svg path {
     fill: var(--basic-red);
+}
+
+.search::-webkit-input-placeholder {
+    color: var(--basic-white);
+}
+
+.search::-moz-placeholder {
+    color: var(--basic-white);
 }
 
 .search::placeholder {
@@ -216,7 +226,9 @@ img {
 }
 
 .favorites:hover::before,
-.cart:hover::before {
+.favorites:focus::before,
+.cart:hover::before,
+.cart:focus::before {
     opacity: 1;
 }
 
@@ -236,7 +248,8 @@ img {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.order:hover {
+.order:hover,
+.order:focus {
     background-color: var(--order-hover);
 }
 
@@ -310,7 +323,8 @@ img {
     left: 18px;
 }
 
-.button-into:hover svg path {
+.button-into:hover svg path,
+.button-into:focus svg path {
     fill: var(--buttons-svg-hover);
 }
 
@@ -330,7 +344,8 @@ img {
     line-height: 21px;
 }
 
-.user-navigation a:hover {
+.user-navigation a:hover,
+.user-navigation a:focus {
     color: var(--basic-red);
 }
 
@@ -362,7 +377,8 @@ img {
     padding-right: 48px;
 }
 
-.main-navigation-item a:hover {
+.main-navigation-item a:hover,
+.main-navigation-item a:focus {
     background-color: var(--darker-blue);
 }
 
@@ -475,7 +491,8 @@ img {
     padding: 10px 36px;
 }
 
-.main-menu-item a:hover {
+.main-menu-item a:hover,
+.main-menu-item a:focus {
     background-color: rgba(197, 197, 197, 0.3);
 }
 
@@ -776,7 +793,8 @@ img {
     box-shadow: 0px 1px 0px var(--darker-blue), inset 0px 1px 0px var(--features-disable-color);
 }
 
-.features-button-disable:hover {
+.features-button-disable:hover,
+.features-button-disable:focus {
     background-color: var(--darker-blue);
 }
 
@@ -1193,7 +1211,9 @@ img {
     color: var(--basic-white);
 }
 
-.footer-menu-item a:hover {
+.footer-menu-item a:hover,
+.footer-menu-item a:focus {
+    -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
 }
 
@@ -1260,7 +1280,8 @@ img {
 }
 
 .social-button:hover,
-.social-button:active {
+.social-button:active,
+.social-button:focus {
     background-color: var(--basic-red);
 }
 
@@ -1278,7 +1299,8 @@ img {
     color: var(--footer-nav-bottom);
 }
 
-.feedback a:hover {
+.feedback a:hover,
+.feedback a:focus {
     text-decoration: underline;
 }
 
@@ -1295,7 +1317,7 @@ img {
 
 
 /*.modal {
-    display: none;
+  display: none;
 } */
 
 
@@ -1314,7 +1336,8 @@ img {
 }
 
 .full-cart:active,
-.full-cart:hover {
+.full-cart:hover,
+.full-cart:focus {
     background-color: var(--darker-red);
 }
 
@@ -1358,28 +1381,22 @@ img {
     background-position: 0 0;
 }
 
+.exit-cabinet {
+    display: block;
+    margin-left: 21px;
+    margin-top: 7px;
+}
+
 .into-cabinet:hover svg path,
-.exit-cabinet:hover svg path {
+.into-cabinet:focus svg path,
+.exit-cabinet:hover svg path,
+.exit-cabinet:focus svg path {
     fill: var(--buttons-svg-hover);
 }
 
 .into-cabinet:active svg path,
 .exit-cabinet:active svg path {
     fill: var(--borders-grey);
-}
-
-.exit-cabinet {
-    position: relative;
-}
-
-.exit-cabinet svg {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: 21px;
-    width: 20px;
-    height: 17px;
-    background-position: 0 0;
 }
 
 .personal-navigation {
@@ -1412,7 +1429,8 @@ img {
     line-height: 18px;
 }
 
-.personal-navigation a:hover {
+.personal-navigation a:hover,
+.personal-navigation a:focus {
     color: var(--basic-red);
 }
 
@@ -1567,7 +1585,7 @@ img {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
 }
 
 .price-controls::after {
@@ -1581,9 +1599,7 @@ img {
 
 .price-controls input {
     width: 75px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 17px;
+    padding: 9px;
     text-align: center;
     color: var(--basic-black);
     border: none;
@@ -1594,6 +1610,13 @@ img {
     line-height: 18px;
     font-weight: 400;
     text-transform: uppercase;
+    -moz-appearance: textfield;
+}
+
+.price-controls input::-webkit-inner-spin-button,
+.price-controls input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .filter .filter-producers {
@@ -1616,6 +1639,8 @@ img {
     position: relative;
     display: block;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 
@@ -1781,7 +1806,8 @@ img {
     border-bottom: 1px dashed var(--basic-red);
 }
 
-.sorting-button:hover {
+.sorting-button:hover,
+.sorting-button:focus {
     color: var(--basic-black);
     border-bottom: 1px solid var(--basic-red);
 }
@@ -1811,7 +1837,9 @@ img {
 }
 
 .sorting-button-up:hover svg,
-.sorting-button-down:hover svg {
+.sorting-button-up:focus svg,
+.sorting-button-down:hover svg,
+.sorting-button-down:focus svg {
     opacity: 1;
 }
 
@@ -1882,7 +1910,8 @@ img {
 }
 
 .products-item:hover,
-.makers-item:hover {
+.makers-item:hover,
+.makers-item a:focus {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -1903,6 +1932,7 @@ img {
     font-size: 17px;
     line-height: 18px;
     text-transform: uppercase;
+    -webkit-text-decoration-line: line-through;
     text-decoration-line: line-through;
     color: var(--old-prices);
 }
@@ -1952,7 +1982,8 @@ img {
     border-radius: 2px;
 }
 
-.products-buy:hover {
+.products-buy:hover,
+.products-buy:focus {
     background-color: var(--order-hover);
 }
 
@@ -1976,7 +2007,8 @@ img {
     border-radius: 2px;
 }
 
-.in-favorite:hover {
+.in-favorite:hover,
+.in-favorite:focus {
     border: 3px solid var(--basic-blue);
 }
 
@@ -2010,7 +2042,8 @@ img {
     text-transform: uppercase;
 }
 
-.pagination-item a:hover {
+.pagination-item a:hover,
+.pagination-item a:focus {
     border: 1px solid var(--borders-grey);
 }
 
@@ -2024,7 +2057,8 @@ img {
     background-color: var(--basic-red);
 }
 
-.pagination-item-active a:hover {
+.pagination-item-active a:hover,
+.pagination-item-active a:focus {
     border: 1px solid var(--basic-red);
 }
 
