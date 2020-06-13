@@ -62,3 +62,17 @@ window.addEventListener("keydown", function(evt) {
         }
     }
 });
+
+var mapLink = document.querySelector(".main-map");
+var mapModal = document.querySelector(".modal-map");
+var mapClose = mapModal.querySelector(".modal-close");
+
+mapLink.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    mapModal.classList.add("modal-show");
+});
+
+mapClose.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    mapModal.classList.remove("modal-show");
+});
