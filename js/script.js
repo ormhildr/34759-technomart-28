@@ -41,7 +41,7 @@ feedbackClose.addEventListener("click", function(evt) {
 });
 
 feedbackForm.addEventListener("submit", function(evt) {
-    if (!feedbackName.value || !feedbackMail.value || !feedbackMessage) {
+    if (!feedbackName.value || !feedbackMail.value || !feedbackMessage.value) {
         evt.preventDefault();
         feedbackModal.classList.remove("modal-error");
         feedbackModal.offsetWidth = feedbackModal.offsetWidth;
@@ -75,4 +75,13 @@ mapLink.addEventListener("click", function(evt) {
 mapClose.addEventListener("click", function(evt) {
     evt.preventDefault();
     mapModal.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function(evt) {
+    if (evt.keyCode === 27) {
+        if (mapModal.classList.contains("modal-show")) {
+            evt.preventDefault();
+            mapModal.classList.remove("modal-show");
+        }
+    }
 });

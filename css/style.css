@@ -516,8 +516,6 @@ img {
 }
 
 .slider-item {
-    padding-top: 23px;
-    padding-left: 24px;
     width: 620px;
     height: 266px;
 }
@@ -532,19 +530,26 @@ img {
     background-repeat: no-repeat;
 }
 
-.slider-item h3 {
-    margin: 0;
+.slider-item-title {
+    padding-top: 23px;
+    padding-left: 24px;
+    padding-bottom: 15px;
+    margin-bottom: 97px;
     color: var(--basic-white);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.slider-item-title h3 {
+    margin: 0;
+    margin-bottom: 6px;
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     text-transform: uppercase;
 }
 
-.slider-item p {
+.slider-item-title p {
     margin: 0;
-    margin-top: 5px;
-    color: var(--basic-white);
     font-size: 18px;
     line-height: 24px;
 }
@@ -553,7 +558,7 @@ img {
     display: inline-block;
     vertical-align: middle;
     padding: 10px 46px;
-    margin-top: 113px;
+    margin-left: 24px;
 }
 
 .slider-item a:active {
@@ -607,13 +612,13 @@ img {
 
 .arrow-left {
     position: absolute;
-    top: -167px;
+    top: -144px;
     left: 24px;
 }
 
 .arrow-right {
     position: absolute;
-    top: -168px;
+    top: -144px;
     right: -600px;
     transform: scale(-1, 1);
 }
@@ -1463,8 +1468,8 @@ img {
     position: absolute;
     left: -35px;
     top: -1px;
-    width: 23px;
-    height: 23px;
+    width: 26px;
+    height: 26px;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1476,8 +1481,8 @@ img {
     position: absolute;
     left: -35px;
     top: -1px;
-    width: 23px;
-    height: 23px;
+    width: 26px;
+    height: 26px;
     background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1676,8 +1681,7 @@ img {
 
 .choices-list {
     display: none;
-    margin-top: 38px;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
     list-style: none;
 }
 
@@ -1782,6 +1786,7 @@ img {
 }
 
 .products-buy {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     padding: 10px 40px 10px 53px;
@@ -1794,6 +1799,19 @@ img {
     text-transform: uppercase;
     box-shadow: inset 0px -3px 0px var(--products-buy-shadow);
     border-radius: 2px;
+}
+
+.products-buy::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/icon_cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
 }
 
 .products-buy:hover,
@@ -1929,6 +1947,7 @@ img {
 
 .modal-map iframe {
     display: block;
+    position: relative;
     border: none;
 }
 
