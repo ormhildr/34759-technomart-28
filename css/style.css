@@ -520,12 +520,12 @@ img {
 }
 
 .slider-item:nth-of-type(1) {
-    background-image: url("../img/img_perforators.jpg");
+    background-image: url("../img/img_drills.jpg");
     background-repeat: no-repeat;
 }
 
 .slider-item:nth-of-type(2) {
-    background-image: url("../img/img_drills.jpg");
+    background-image: url("../img/img_perforators.jpg");
     background-repeat: no-repeat;
 }
 
@@ -785,6 +785,7 @@ img {
     font-weight: 700;
     font-size: 21px;
     line-height: 30px;
+    cursor: pointer;
 }
 
 .features-button-active {
@@ -805,9 +806,16 @@ img {
     flex-grow: 1;
 }
 
+.features-all-item {
+    display: none;
+}
+
+.features-current {
+    display: block;
+}
+
 .features-all h3 {
     margin: 0;
-    margin-bottom: 29px;
     color: var(--basic-blue);
     font-size: 30px;
     line-height: 30px;
@@ -831,11 +839,12 @@ img {
     background-position-y: -1px;
 }
 
+.features-delivery h3 {
+    margin-bottom: 28px;
+}
+
 .features-guarantee h3 {
-    margin-top: 3px;
-    font-size: 36px;
-    line-height: 24px;
-    margin-bottom: 31px;
+    margin-bottom: 23px;
 }
 
 .features-credit {
@@ -846,22 +855,16 @@ img {
 }
 
 .features-credit h3 {
-    font-size: 36px;
-    line-height: 24px;
-    margin-bottom: 33px;
+    margin-bottom: 27px;
 }
 
 .features-credit p {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
 }
 
 .features-credit a {
     padding: 10px 45px 12px 45px;
     border-radius: 2px;
-}
-
-.features-hidden {
-    display: none;
 }
 
 .index-columns {
@@ -1941,10 +1944,19 @@ img {
     width: 943px;
 }
 
+.modal-map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 449px;
+    z-index: 1;
+}
+
 .modal-map iframe {
     display: block;
     position: relative;
     border: none;
+    z-index: 2;
 }
 
 .modal-feedback {
@@ -1961,6 +1973,7 @@ img {
     padding-bottom: 37px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .feedback-form-inner p {
@@ -1969,8 +1982,8 @@ img {
     flex-direction: column;
 }
 
-.feedback-form-inner .feedback-name {
-    margin-right: 20px;
+.feedback-message {
+    width: 100%;
 }
 
 .feedback-form-inner label {
@@ -2085,6 +2098,7 @@ img {
     background-color: transparent;
     border: 0;
     cursor: pointer;
+    z-index: 2;
 }
 
 .modal-close::before,
